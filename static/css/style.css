@@ -1,0 +1,345 @@
+@import "./variables.css";
+
+/* Overide */
+.scrollmagic-pin-spacer {
+  position: static !important;
+}
+
+/* Cursor */
+.cursor {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid var(--light);
+  border-radius: 50%;
+  overflow: hidden;
+  pointer-events: none;
+  transform-origin: 75% 75%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease all;
+  transition-property: background, transform;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.cursor .cursor-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark);
+  transform: rotate(-45deg);
+}
+.cursor.active-nav-cursor {
+  background: var(--secondary);
+  transform: scale(3);
+}
+.cursor.active-btn-cursor {
+  background: var(--light);
+  transform: scale(3);
+}
+
+/* Swipes */
+.swipe {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+}
+.swipe.swipe-1 {
+  background: var(--primary);
+  z-index: 5;
+}
+.swipe.swipe-2 {
+  background: var(--secondary);
+  z-index: 4;
+}
+.swipe.swipe-3 {
+  background: var(--tertiary);
+  z-index: 3;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  padding: 2rem 0;
+  position: relative;
+  background: transparent;
+  z-index: 3;
+}
+.header .logo {
+  font-family: var(--cursive);
+  font-weight: 400;
+  font-size: 3rem;
+  color: var(--light);
+  text-decoration: underline;
+  text-decoration-thickness: 0.1rem;
+  cursor: none;
+}
+.header .burger {
+  cursor: none;
+}
+.header .burger .line-1,
+.header .burger .line-2 {
+  width: 3rem;
+  height: 0.15rem;
+  background: var(--light);
+  display: block;
+  margin: 0.5rem auto;
+  pointer-events: none;
+}
+
+/* Navbar */
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10rem;
+  opacity: 1;
+  clip-path: circle(50px at 100% -10%);
+}
+.nav-bar .links {
+  flex-basis: 30rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.nav-bar .links li {
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--dark);
+  cursor: pointer;
+  display: inline-block;
+}
+.nav-bar .contact {
+  flex-basis: 30rem;
+}
+.nav-bar .contact h4 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--dark-alt);
+  margin-bottom: 3rem;
+}
+.nav-bar .contact address {
+  color: var(--dark-alt);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  font-style: normal;
+}
+.nav-bar .contact address span {
+  display: block;
+  margin-top: 1rem;
+}
+
+/* Slides */
+main {
+  width: 100%;
+  margin: auto;
+  background: var(--dark);
+  position: absolute;
+}
+.slide {
+  width: 100%;
+  min-height: 100vh;
+  margin: auto;
+  transition: 0.5s ease all;
+  background: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slide .hero-image {
+  position: relative;
+  flex: 1;
+  flex-basis: 25rem;
+  overflow: hidden;
+}
+.slide .hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.slide .hero-desc {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+  flex-basis: 25rem;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+.slide .hero-desc h3 {
+  font-family: var(--cursive);
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--light);
+  margin-bottom: 2rem;
+}
+.slide .hero-desc p {
+  margin-bottom: 3rem;
+}
+.slide .hero-image .reveal-img,
+.slide .hero-desc .reveal-text {
+  position: absolute;
+  top: -15%;
+  left: 0;
+  width: 100%;
+  height: 130%;
+  background: var(--dark);
+}
+.slide .title {
+  position: relative;
+  overflow: hidden;
+}
+.slide .title-swipe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: darken;
+  transform: translateY(100%);
+}
+.slide .title-swipe.t-swipe-1 {
+  background: var(--secondary);
+}
+.slide .title-swipe.t-swipe-2 {
+  background: var(--tertiary);
+}
+.slide .title-swipe.t-swipe-3 {
+  background: var(--primary);
+}
+
+/* Detail Pages */
+.detail {
+  width: 100%;
+  min-height: 100vh;
+  margin: auto;
+  transition: 0.5s ease all;
+  background: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+.detail .detail-image {
+  height: 75vh;
+  flex: 1;
+  flex-basis: 30rem;
+}
+.detail .detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: right;
+}
+.detail .detail-text {
+  flex: 1;
+  flex-basis: 30rem;
+}
+.detail .detail-text h4 {
+  font-size: 3.5rem;
+  font-weight: 400;
+  font-family: var(--cursive);
+  color: var(--light);
+  margin-bottom: 3.5rem;
+}
+.detail .detail-num {
+  position: absolute;
+  right: 30%;
+  bottom: 0%;
+  line-height: 100%;
+  font-size: 10rem;
+  font-weight: 400;
+  color: var(--light);
+  opacity: 0.2;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 100%;
+    padding: 0 3rem;
+  }
+  .slide .container .row,
+  .detail .container .row {
+    flex-direction: column;
+  }
+  .slide .container .row .hero-desc,
+  .detail .container .row .detail-text {
+    flex-basis: auto;
+  }
+  .detail .detail-image img {
+    object-position: center;
+  }
+  .detail .detail-num {
+    right: 0;
+  }
+  .nav-bar {
+    padding: 3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+  .detail .detail-num {
+    right: 0;
+    top: 30%;
+    font-size: 5rem;
+  }
+  .slide .hero-desc h3,
+  .detail .detail-text h4 {
+    font-size: 2.5rem;
+  }
+  .detail .detail-text h4 {
+    margin-bottom: 1.5rem;
+  }
+  .nav-bar {
+    flex-direction: column;
+    padding: 1.5rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .header .logo {
+    font-size: 1.5rem;
+  }
+  .header .burger .line-1,
+  .header .burger .line-2 {
+    width: 1.5rem;
+  }
+  .nav-bar .links {
+    flex-basis: auto;
+    margin-top: 5rem;
+  }
+  .nav-bar .links li {
+    font-size: 1.5rem;
+  }
+  .nav-bar .contact {
+    flex-basis: auto;
+  }
+  .nav-bar .contact h4 {
+    font-size: 2rem;
+    margin: 3rem 0 1.5rem;
+  }
+  .nav-bar .contact address,
+  p {
+    font-size: 1.2rem;
+  }
+}

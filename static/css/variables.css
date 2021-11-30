@@ -1,0 +1,178 @@
+/* Imports */
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Variables */
+:root {
+  /* Fonts */
+  --cursive: "Abril Fatface", cursive;
+  --sans-serif: "Montserrat", sans-serif;
+
+  /* Colors */
+  --primary: #ff8b5d;
+  --secondary: #567cdc;
+  --tertiary: #a76ee7;
+  --dark: #17181a;
+  --dark-alt: #414d52;
+  --light: #ffffff;
+  --light-alt: #bdbdbd;
+
+  /* Shadow */
+  --shadow: 0 0.5rem 1rem #ffd28b5e;
+}
+
+/* Default */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+*::selection {
+  background: transparent;
+  color: inherit;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--light);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--sans-serif);
+  background: var(--dark);
+  overflow-x: hidden;
+  position: relative;
+  transition: 0.5s ease all;
+}
+body.overflow-hide {
+  overflow: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+b,
+i,
+u,
+ul,
+ol,
+li,
+span {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+img,
+video {
+  width: 100%;
+}
+p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--light-alt);
+}
+
+/* Background */
+.bg-primary {
+  background: var(--primary) !important;
+}
+.bg-secondary {
+  background: var(--secondary) !important;
+}
+.bg-tertiary {
+  background: var(--tertiary) !important;
+}
+.bg-light {
+  background: var(--light) !important;
+}
+.bg-light-alt {
+  background: var(--light-alt) !important;
+}
+.bg-dark {
+  background: var(--dark) !important;
+}
+.bg-dark-alt {
+  background: var(--dark-alt) !important;
+}
+
+/* Color */
+.text-primary {
+  color: var(--primary) !important;
+}
+.text-secondary {
+  color: var(--secondary) !important;
+}
+.text-tertiary {
+  color: var(--tertiary) !important;
+}
+.text-light {
+  color: var(--light) !important;
+}
+.text-light-alt {
+  color: var(--light-alt) !important;
+}
+.text-dark {
+  color: var(--dark) !important;
+}
+.text-dark-alt {
+  color: var(--dark-alt) !important;
+}
+
+/* Explore Button */
+.explore {
+  color: var(--light);
+  outline: none;
+  border: 2px solid var(--light);
+  font-size: 1rem;
+  padding: 0.7rem 1rem;
+  transition: 0.5s ease all;
+  text-decoration: none;
+  cursor: none;
+}
+
+/* Grid */
+.container {
+  width: 80%;
+  margin: auto;
+  position: relative;
+}
+.row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.g-1 {
+  gap: 1rem;
+}
+.g-2 {
+  gap: 2rem;
+}
+.g-3 {
+  gap: 3rem;
+}
+.g-4 {
+  gap: 4rem;
+}
+.g-5 {
+  gap: 5rem;
+}
